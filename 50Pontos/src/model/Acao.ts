@@ -1,0 +1,7 @@
+enum Acao{
+CRIACAO = 'CRIACAO',
+ATUALIZACAO = 'ATUALIZACAO',
+EXCLUSAO = 'EXCLUSAO'
+}
+
+export default Acao;
