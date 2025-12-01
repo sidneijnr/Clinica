@@ -25,7 +25,7 @@ export async function controller_atualizarMedico() {
             especialidade,
             crm
         }
-        await atualizar_MedicoService(id, medico)
+        await atualizar_MedicoService(idAtu, medico)
 
         const log: Logs = {
             acao: Acao.ATUALIZACAO,

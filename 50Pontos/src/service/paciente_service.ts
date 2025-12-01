@@ -47,7 +47,7 @@ export async function atualizar_PacienteService(id: number, paciente: Paciente) 
 
     const existe = await ValidarCpf(paciente.cpf);
 
-    if (existe) {
+    if (existe || existe.id != id) {
         throw new Error("Já existe um paciente cadastrado com esse CPF.");
     }
 

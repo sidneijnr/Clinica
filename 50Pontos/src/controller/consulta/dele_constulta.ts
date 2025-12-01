@@ -15,9 +15,11 @@ export async function controller_excluirConsulta() {
         console.log("---------------------------------- DELETAR CONSULTA ----------------------------------")
         const id: number = Number(prompt("ID do usuário que esta realizando a operação: "))
         const idExclu: number = Number(prompt("ID da consulta que será deletada: "))
-        await excluir_ConsultaService(idExclu)
 
         usuario_existe(id)
+        await excluir_ConsultaService(idExclu)
+
+      
 
         console.log("Consulta deletado com sucesso")
         const log: Logs = {

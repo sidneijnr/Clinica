@@ -1,6 +1,6 @@
 import exame from "../model/Exame";
 import { dbPromisse } from "../repository/bd";
-import { atualizar_exame, cadastrar_exame } from "../repository/repo_exame";
+import { atualizar_exame, cadastrar_exame, deletar_exame } from "../repository/repo_exame";
 
 export async function verificarExame(nome: string) {
     const db = await dbPromisse;
@@ -58,6 +58,6 @@ export async function excluit_exameService(id: number) {
         throw new Error("EXAME NÃO ENCONTRADO");
     }
 
-
+    await deletar_exame(id);
 }
 
